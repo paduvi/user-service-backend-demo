@@ -1,0 +1,31 @@
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.510Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.664Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.665Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.665Z"}
+{"level":"notice","message":"pid: 88334","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.667Z"}
+{"level":"notice","message":"server ID: 192.168.1.135","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.667Z"}
+{"level":"info","message":"actionhero member 192.168.1.135 has joined the cluster","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.672Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.679Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.135 @ 2017-01-04T08:09:54.689Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.135 @ 2017-01-04T08:09:55.371Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.135 @ 2017-01-04T08:09:55.371Z"}
+{"level":"notice","message":"Shutting down open servers and stopping task processing...","timestamp":"192.168.1.135 @ 2017-01-04T08:10:16.918Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.393Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.592Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.593Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.593Z"}
+{"level":"notice","message":"pid: 88526","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.595Z"}
+{"level":"notice","message":"server ID: 192.168.1.135","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.596Z"}
+{"level":"info","message":"actionhero member 192.168.1.135 has joined the cluster","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.602Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.611Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.135 @ 2017-01-04T08:10:24.622Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.135 @ 2017-01-04T08:10:25.522Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.135 @ 2017-01-04T08:10:25.522Z"}
+{"to":"127.0.0.1","file":"/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/public/index.html","requestedFile":"index.html","size":4786,"duration":6,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.423Z"}
+{"to":"127.0.0.1","file":"/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/public/javascript/actionheroClient.js","requestedFile":"javascript/actionheroClient.js","size":95929,"duration":4,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.442Z"}
+{"to":"127.0.0.1","file":"/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/public/css/cosmo.css","requestedFile":"css/cosmo.css","size":125619,"duration":7,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.443Z"}
+{"to":"127.0.0.1","file":"/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/public/logo/actionhero.png","requestedFile":"logo/actionhero.png","size":142141,"duration":4,"success":true,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.462Z"}
+{"to":"127.0.0.1","action":"showDocumentation","params":"{\"action\":\"showDocumentation\",\"apiVersion\":1}","duration":2,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.546Z"}
+{"to":"127.0.0.1","action":"status","params":"{\"action\":\"status\",\"apiVersion\":1}","duration":48,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.598Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"favicon.ico","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.135 @ 2017-01-04T08:10:46.744Z"}
+{"level":"notice","message":"Shutting down open servers and stopping task processing...","timestamp":"192.168.1.135 @ 2017-01-04T08:22:56.188Z"}

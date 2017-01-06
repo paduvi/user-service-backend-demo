@@ -1,0 +1,75 @@
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.009Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.180Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.180Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.180Z"}
+{"level":"notice","message":"pid: 93037","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.182Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.183Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:45:06.189Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:45:57.147Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.286Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.479Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.479Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.479Z"}
+{"level":"notice","message":"pid: 93086","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.481Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.482Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.489Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.499Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.94 @ 2017-01-05T13:47:46.502Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.94 @ 2017-01-05T13:47:47.456Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.94 @ 2017-01-05T13:47:47.596Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/initializers/sequelize.js) ***","timestamp":"192.168.1.94 @ 2017-01-05T13:47:59.626Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.594Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.802Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.803Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.803Z"}
+{"level":"notice","message":"pid: 93091","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.807Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.807Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.819Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.826Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.94 @ 2017-01-05T13:48:03.830Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.94 @ 2017-01-05T13:48:04.907Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.94 @ 2017-01-05T13:48:05.070Z"}
+{"to":"127.0.0.1","file":"{not found}","requestedFile":"clientsList","size":null,"duration":null,"success":false,"level":"info","message":"[ file @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T13:48:48.655Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.217Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.508Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.508Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.509Z"}
+{"level":"notice","message":"pid: 93195","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.515Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.516Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.579Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.585Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.94 @ 2017-01-05T13:53:30.592Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.94 @ 2017-01-05T13:53:31.561Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.94 @ 2017-01-05T13:53:31.656Z"}
+{"level":"notice","message":"Shutting down open servers and stopping task processing...","timestamp":"192.168.1.94 @ 2017-01-05T13:54:53.077Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:54:54.980Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.341Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.342Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.342Z"}
+{"level":"notice","message":"pid: 93220","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.345Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.345Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.350Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.357Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.94 @ 2017-01-05T13:54:55.362Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.94 @ 2017-01-05T13:54:56.280Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.94 @ 2017-01-05T13:54:56.368Z"}
+{"to":"127.0.0.1","action":"clientsList","params":"{\"action\":\"clientsList\",\"apiVersion\":1}","duration":65,"error":"SequelizeDatabaseError: relation \"client\" does not exist","level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T13:54:57.218Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/initializers/sequelize.js) ***","timestamp":"192.168.1.94 @ 2017-01-05T13:56:15.580Z"}
+{"level":"notice","message":"*** Starting ActionHero ***","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.595Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.755Z"}
+{"level":"info","message":"ACTIONHERO COMMAND >> start","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.756Z"}
+{"level":"info","message":"--------------------------------------","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.756Z"}
+{"level":"notice","message":"pid: 93285","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.758Z"}
+{"level":"notice","message":"server ID: 192.168.1.94","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.759Z"}
+{"level":"info","message":"actionhero member 192.168.1.94 has joined the cluster","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.769Z"}
+{"level":"notice","message":"Starting server: `web` @ 0.0.0.0:8080","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.776Z"}
+{"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.1.94 @ 2017-01-05T13:58:59.781Z"}
+{"level":"notice","message":"environment: development","timestamp":"192.168.1.94 @ 2017-01-05T13:59:01.297Z"}
+{"level":"alert","message":"*** ActionHero Started ***","timestamp":"192.168.1.94 @ 2017-01-05T13:59:01.695Z"}
+{"to":"127.0.0.1","action":"clientsList","params":"{\"action\":\"clientsList\",\"apiVersion\":1}","duration":24,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T13:59:02.951Z"}
+{"to":"127.0.0.1","params":"{\"title\":\"Techmaster\",\"success_uri\":\"http://localhost:8080/auth/success\"}","duration":5,"error":"Error: unknown action or invalid apiVersion","level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T18:09:41.513Z"}
+{"to":"127.0.0.1","action":"clientAdd","params":"{\"title\":\"Techmaster\",\"success_uri\":\"http://localhost:8080/auth/success\",\"action\":\"clientAdd\",\"apiVersion\":1}","duration":80,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T18:09:56.049Z"}
+{"to":"127.0.0.1","action":"clientsList","params":"{\"action\":\"clientsList\",\"apiVersion\":1}","duration":32,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T18:10:23.242Z"}
+{"to":"127.0.0.1","action":"clientAdd","params":"{\"title\":\"Techmaster\",\"success_uri\":\"http://localhost:8080/auth/success\",\"scope\":[\"user\",\"payroll\",\"course\"],\"action\":\"clientAdd\",\"apiVersion\":1}","duration":65,"error":"SequelizeUniqueConstraintError: Validation error","level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T18:11:04.826Z"}
+{"to":"127.0.0.1","action":"clientAdd","params":"{\"title\":\"Techmaster\",\"success_uri\":\"http://localhost:8080/auth/success\",\"scope\":[\"user\",\"payroll\",\"course\"],\"action\":\"clientAdd\",\"apiVersion\":1}","duration":39,"level":"info","message":"[ action @ web ]","timestamp":"192.168.1.94 @ 2017-01-05T18:11:39.707Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/initializers/clients.js) ***","timestamp":"192.168.1.94 @ 2017-01-05T18:12:43.687Z"}

@@ -1,0 +1,30 @@
+{
+  "author": "Paduvi <viet@techmaster.vn>",
+  "name": "user-service",
+  "description": "user service",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "actionhero": "16.0.0",
+    "bluebird": "^3.4.7",
+    "continuation-local-storage": "^3.2.0",
+    "fakeredis": "latest",
+    "ioredis": "latest",
+    "lodash": "^4.17.4",
+    "pg": "^6.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.28.0",
+    "ws": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "scripts": {
+    "start": "actionhero start",
+    "actionhero": "actionhero",
+    "test": "NODE_ENV=test mocha"
+  }
+}
