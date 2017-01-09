@@ -1,5 +1,6 @@
 // initializers/users.js
 var Promise = require('bluebird');
+var _ = require('lodash');
 
 module.exports = {
 
@@ -9,15 +10,30 @@ module.exports = {
 
             // methods
             get: function (id, next) {
-                api.models.user.findById(id, {
-                    attributes: {exclude: ['salt', 'user_pass']}
-                }).then(function (user) {
+                return Promise.coroutine(function*() {
+                    let user = yield api.models.user.findById(id, {
+                        attributes: {exclude: ['salt', 'user_pass']}
+                    });
                     if (!user)
                         return next(new Error('User not found'));
-                    return next(null, user);
-                }).catch(function (error) {
+
+                    let permissions = {};
+
+                    let roles = user.role_ids.split(',');
+                    yield Promise.map(roles, function (role_id) {
+                        return api.models.role.findById(role_id).then(function (role) {
+                            let role_permissions = JSON.parse(role.permissions);
+                            if (role_permissions.feature) {
+                                Object.keys(role_permissions.feature).forEach(function (key) {
+                                    permissions[key] = _.union(permissions[key], role_permissions.feature[key].map(p => p.name));
+                                });
+                            }
+                        });
+                    });
+                    return next(null, Object.assign(user.toJSON(), {permissions}));
+                })().catch(function (error) {
                     return next(error);
-                })
+                });
             },
 
             add: function (userName, email, password, next) {

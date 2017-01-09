@@ -24,3 +24,4 @@
 {"level":"notice","message":"Starting server: `websocket`","timestamp":"192.168.0.100 @ 2017-01-05T18:16:33.433Z"}
 {"level":"notice","message":"environment: development","timestamp":"192.168.0.100 @ 2017-01-05T18:16:34.078Z"}
 {"level":"alert","message":"*** ActionHero Restarted ***","timestamp":"192.168.0.100 @ 2017-01-05T18:16:34.084Z"}
+{"level":"info","message":"*** Rebooting due to initializer change (/Users/chotoxautinh/Workspaces/nodejs/user-actionhero/initializers/clients.js) ***","timestamp":"192.168.0.100 @ 2017-01-06T07:51:33.335Z"}

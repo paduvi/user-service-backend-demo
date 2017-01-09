@@ -21,12 +21,30 @@ module.exports = {
                 })
             },
 
-            add: function (title, success_uri, fallback_uri, scope, next) {
+            getSecret: function (appId, ownerId, ownerPass, next) {
+                Promise.coroutine(function*() {
+                    let user = yield api.models.user.findById(ownerId);
+                    if (!user)
+                        return next(new Error('User not found'));
+                    if (!user.authenticate(ownerPass))
+                        return next(new Error('Invalid credentials'));
+                    let client = yield api.models.client.findById(appId);
+                    if (!client)
+                        return next(new Error('Client not found'));
+                    let secret = client.decrypt(client.client_secret);
+                    return next(null, secret);
+                })().catch(function (error) {
+                    return next(error);
+                })
+            },
+
+            add: function (title, success_uri, fallback_uri, scope, owner_id, next) {
                 api.models.client.create({
                     title,
                     success_uri,
                     fallback_uri,
-                    scope
+                    scope,
+                    owner_id
                 }).then(function () {
                     return next();
                 }).catch(function (error) {
@@ -37,6 +55,7 @@ module.exports = {
             edit: function (id, data, next) {
                 delete data.client_secret;
                 delete data.salt;
+                delete data.id;
 
                 api.models.client.update(data, {
                     where: {
@@ -51,9 +70,7 @@ module.exports = {
                 })
             },
 
-            list: function (limit, page, next) {
-                limit = limit || 15;
-                page = page || 1;
+            list: function (limit = 15, page = 1, next) {
                 let offset = 0;
 
                 if (page > 1)
@@ -71,18 +88,22 @@ module.exports = {
                 })
             },
 
-            authenticate: function (client_id, client_secret, scope, next) {
+            authenticate: function (client_id, client_secret, scope = [], next) {
                 Promise.coroutine(function*() {
                     let client = yield api.models.client.findById(client_id);
                     if (!client)
                         return next(new Error('Client not found'));
                     if (!client.authenticate(client_secret))
                         return next(new Error('Invalid credentials'));
-                    let dif = _.difference(scope, client.scope).length;
+                    let dif = _.difference(scope, client.scope);
                     if (dif.length > 0)
                         return next(new Error(`Invalid scope: ${dif.join(', ')}`));
-                    return next(null, client.id);
-                })();
+                    if (!scope.length)
+                        scope = client.scope;
+                    return next(null, client.id, scope);
+                })().catch(function (error) {
+                    return next(error);
+                })
             },
 
         }

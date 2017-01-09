@@ -37,7 +37,8 @@ module.exports = function (sequelize, DataTypes) {
         fallback_uri: DataTypes.STRING(255),
         scope: {
             type: DataTypes.ARRAY(DataTypes.STRING),
-        }
+        },
+        owner_id: DataTypes.INTEGER
     }, {
         timestamps: false,
         tableName: 'client',
