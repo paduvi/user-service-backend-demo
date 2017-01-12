@@ -103,8 +103,8 @@ exports.clientGetSecret = {
     authenticated: false,
     inputs: {
         appId: {required: true},
-        ownerId: {required: true},
-        ownerPass: {required: true}
+        ownerId: {required: process.env.NODE_ENV === 'production'},
+        ownerPass: {required: process.env.NODE_ENV === 'production'}
     },
     outputExample: {},
     version: 1.0,

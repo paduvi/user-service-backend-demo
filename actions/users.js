@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
-const ejs = require('ejs');
 const path = require('path');
 const fs = require('fs');
 
@@ -29,8 +28,10 @@ exports.userLogin = {
                     return next(error);
 
                 function fallbackError(error) {
-                    data.response.redirectURL = (client.fallback_uri || client.success_uri) + "?authCode=" + data.params.authCode
-                        + "&scope=" + data.params.scope.join(',') + "&error=" + error.message;
+                    data.response.redirectURL = client.fallback_uri || client.success_uri;
+                    data.response.authCode = data.params.authCode;
+                    data.response.scope = data.params.scope;
+                    data.response.error = error.message;
                     next();
                 }
 
@@ -57,9 +58,11 @@ exports.userLogin = {
                         }, userSecretKey, {expiresIn: expire_time}, function (error, token) {
                             if (error)
                                 return fallbackError(error);
-                            data.response.redirectURL = client.success_uri + "?accessToken=" + token
-                                + "&expiredTime=" + expire_time + "&refreshToken=" + result.refresh_token
-                                + "&authScheme=" + api.config.general.authScheme;
+                            data.response.redirectURL = client.success_uri;
+                            data.response.accessToken = token;
+                            data.response.expiredTime = expire_time;
+                            data.response.refreshToken = result.refresh_token;
+                            data.response.authScheme = api.config.general.authScheme;
                             next();
                         });
                     })

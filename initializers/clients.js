@@ -23,11 +23,13 @@ module.exports = {
 
             getSecret: function (appId, ownerId, ownerPass, next) {
                 Promise.coroutine(function*() {
-                    let user = yield api.models.user.findById(ownerId);
-                    if (!user)
-                        return next(new Error('User not found'));
-                    if (!user.authenticate(ownerPass))
-                        return next(new Error('Invalid credentials'));
+                    if (process.env.NODE_ENV === 'production'){
+                        let user = yield api.models.user.findById(ownerId);
+                        if (!user)
+                            return next(new Error('User not found'));
+                        if (!user.authenticate(ownerPass))
+                            return next(new Error('Invalid credentials'));
+                    }
                     let client = yield api.models.client.findById(appId);
                     if (!client)
                         return next(new Error('Client not found'));
@@ -79,7 +81,9 @@ module.exports = {
                 let opts = {
                     limit: limit,
                     offset: offset,
-                    attributes: {exclude: ['salt', 'client_secret']}
+                    attributes: {
+                        exclude: ['salt', 'client_secret']
+                    }
                 }
                 return api.models.client.findAndCountAll(opts).then(function (clients) {
                     return next(null, clients);
