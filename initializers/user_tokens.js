@@ -1,5 +1,5 @@
 // initializers/users.js
-var Promise = require('bluebird');
+var jwt = require('jsonwebtoken');
 
 module.exports = {
 
@@ -34,10 +34,14 @@ module.exports = {
                 })
             },
 
-            refresh: function (id, next) {
+            refresh: function (id, refreshToken, next) {
                 api.models.user_token.save({}, {
                     where: {
-                        id
+                        id,
+                        refresh_token: refreshToken,
+                        refresh_token_expires: {
+                            $gt: Date.now()
+                        }
                     }
                 }).then(function (result) {
                     if (result === 0)

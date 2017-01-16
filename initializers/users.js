@@ -96,7 +96,6 @@ module.exports = {
                     return next(null, user.id);
                 })();
             },
-
         }
 
         next()

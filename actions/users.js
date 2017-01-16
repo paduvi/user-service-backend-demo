@@ -54,7 +54,7 @@ exports.userLogin = {
                         jwt.sign({
                             user_id,
                             scope: data.params.scope,
-                            jwtid: result.id
+                            jti: result.id
                         }, userSecretKey, {expiresIn: expire_time}, function (error, token) {
                             if (error)
                                 return fallbackError(error);
@@ -71,6 +71,57 @@ exports.userLogin = {
         } catch (err) {
             next(err);
         }
+    }
+}
+
+exports.refreshToken = {
+    name: 'refreshToken',
+    description: 'Refresh Token',
+    inputs: {
+        refreshToken: {required: true},
+    },
+    authenticated: false,
+    outputExample: {},
+    version: 1.0,
+    run: function (api, data, next) {
+        let userSecretKey = api.config.general.userSecretKey;
+
+        let auth_header = data.connection.rawConnection.req.headers.authorization;
+        if (!auth_header)
+            return next(new Error('Required Authenticated'));
+        let authScheme = api.config.general.authScheme;
+        if (!auth_header.startsWith(authScheme))
+            return next(new Error('Invalid Auth Scheme'));
+        let accessToken = auth_header.replace(authScheme + ' ', '');
+
+        jwt.decode(accessToken, function (err, {jti, user_id, scope}) {
+            if (err)
+                return next(err);
+            api.user_tokens.refresh(jti, data.params.refreshToken, function (err) {
+                if (err)
+                    return next(err);
+                api.user_tokens.get(jti, user_id, function (err, result) {
+                    if (err)
+                        return next(err);
+
+                    let expire_time = Math.floor(Date.now() / 1000) + 60 * 60; // 1 hour
+                    jwt.sign({
+                        user_id,
+                        scope,
+                        jti
+                    }, userSecretKey, {expiresIn: expire_time}, function (error, token) {
+                        if (error)
+                            return fallbackError(error);
+                        data.response.accessToken = token;
+                        data.response.expiredTime = expire_time;
+                        data.response.refreshToken = result.refresh_token;
+                        data.response.authScheme = api.config.general.authScheme;
+                        next();
+                    });
+                })
+            });
+        });
+
     }
 }
 
