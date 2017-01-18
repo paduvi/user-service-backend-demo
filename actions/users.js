@@ -151,8 +151,8 @@ exports.usersList = {
         let permissions = data.user.permissions;
         if (!permissions.users || !~permissions.users.indexOf("index"))
             return next(new Error(`You don't have permission to access`));
-        api.clients.list(data.params.limit, data.params.page, function (error, clients) {
-            data.response.clients = clients;
+        api.users.list(data.params.limit, data.params.page, function (error, users) {
+            data.response.users = users;
             next(error)
         })
     }
