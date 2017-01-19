@@ -4,7 +4,7 @@
 exports['default'] = {
     sequelize: function (api) {
         return {
-            name: 'techmasterv4',
+            name: 'user_service_demo',
             user: 'postgres',
             password: null,
             dialect: 'postgres',

@@ -19,15 +19,13 @@ module.exports = {
 
                     let permissions = {};
 
-                    let roles = user.role_ids.split(',');
+                    let roles = user.role_ids;
                     yield Promise.map(roles, function (role_id) {
                         return api.models.role.findById(role_id).then(function (role) {
-                            let role_permissions = JSON.parse(role.permissions);
-                            if (role_permissions.feature) {
-                                Object.keys(role_permissions.feature).forEach(function (key) {
-                                    permissions[key] = _.union(permissions[key], role_permissions.feature[key].map(p => p.name));
-                                });
-                            }
+                            let role_permissions = role.permissions;
+                            Object.keys(role_permissions).forEach(function (key) {
+                                permissions[key] = _.union(permissions[key], role_permissions[key]);
+                            });
                         });
                     });
                     return next(null, Object.assign(user.toJSON(), {permissions}));

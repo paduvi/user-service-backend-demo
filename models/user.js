@@ -6,9 +6,8 @@ module.exports = function (sequelize, DataTypes) {
 
     return sequelize.define('user', {
         id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
+            type: DataTypes.BIGINT,
+            primaryKey: true
         },
         user_pass: {
             type: DataTypes.STRING(255),
@@ -29,15 +28,6 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.DATE,
             defaultValue: sequelize.fn('now')
         },
-        user_status: {
-            type: DataTypes.STRING(15),
-            validate: {
-                isIn: {
-                    args: [['publish', 'un-publish']],
-                    msg: 'Invalid data value'
-                }
-            }
-        },
         display_name: {
             type: DataTypes.STRING(250),
             validate: {
@@ -47,33 +37,9 @@ module.exports = function (sequelize, DataTypes) {
                 }
             }
         },
-        user_image_url: {
-            type: DataTypes.STRING(1000),
-            defaultValue: '/img/noImage.png'
-        },
-        reset_password_expires: {
-            type: DataTypes.BIGINT
-        },
-        reset_password_token: {
-            type: DataTypes.STRING
-        },
-        change_email: {
-            type: DataTypes.STRING,
-            validate: {
-                isEmail: {
-                    msg: 'Invalid email address'
-                }
-            }
-        },
-        change_email_expires: {
-            type: DataTypes.BIGINT
-        },
-        change_email_token: {
-            type: DataTypes.STRING
-        },
         salt: DataTypes.STRING(255),
         role_ids: {
-            type: DataTypes.STRING
+            type: DataTypes.ARRAY(DataTypes.INTEGER)
         }
     }, {
         timestamps: false,

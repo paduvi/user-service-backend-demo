@@ -149,7 +149,7 @@ exports.usersList = {
     version: 1.0,
     run: function (api, data, next) {
         let permissions = data.user.permissions;
-        if (!permissions.users || !~permissions.users.indexOf("index"))
+        if (!permissions.users || !~permissions.users.indexOf("manage_all_user"))
             return next(new Error(`You don't have permission to access`));
         api.users.list(data.params.limit, data.params.page, function (error, users) {
             data.response.users = users;

@@ -34,11 +34,16 @@ module.exports = function (sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        fallback_uri: DataTypes.STRING(255),
+        fallback_uri: {
+            type: DataTypes.STRING(255),
+            validate: {
+                notEmpty: true
+            }
+        },
         scope: {
             type: DataTypes.ARRAY(DataTypes.STRING),
         },
-        owner_id: DataTypes.INTEGER
+        owner_id: DataTypes.BIGINT
     }, {
         timestamps: false,
         tableName: 'client',
